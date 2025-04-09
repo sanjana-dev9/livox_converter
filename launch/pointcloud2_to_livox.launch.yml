@@ -1,0 +1,10 @@
+launch:
+    - node:
+          pkg: livox_to_pointcloud2
+          exec: pointcloud2_to_livox_node
+          name: pointcloud2_to_livox_node
+          remap:
+              - from: "/pointcloud2_input"
+                to: "/livox/lidar"
+              - from: "/livox_pointcloud"
+                to: "/livox/lidar/custom"
